@@ -22,4 +22,7 @@ jobs:
       - run: make setup
       - run: make lint
       - run: make test
+      - uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       
